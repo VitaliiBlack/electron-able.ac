@@ -1,0 +1,181 @@
+.highlight-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  width: 100%;
+  background-color: white;
+  .search-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    .search-bar-text {
+      margin-left: 10px;
+      margin-right: 10px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .search-bar-input {
+      margin-left: 10px;
+      margin-right: 10px;
+      font-size: 15px;
+      &:focus {
+        outline: none;
+      }
+    }
+    .search-bar-button {
+      margin-left: 10px;
+      margin-right: 10px;
+      border: none;
+      background-color: transparent;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  .highlight-page-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    border-bottom: 1px solid lightgray;
+  }
+  .highlight-page-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: calc(100vh - 70px);
+
+    .highlighted-list-empty {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: calc(100vh - 70px);
+    }
+
+    .content-window {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      overflow-y: auto;
+      border: "1px solid lightgray";
+      .browser-window {
+        width: calc(100% - 20px);
+        height: calc(100% - 100px);
+        margin: 10px;
+        padding: 5px;
+      }
+    }
+  }
+}
+.highlighted-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: center;
+  width: 100%;
+  overflow: auto;
+  background-color: white;
+  margin-top: 0;
+  .highlighted-list-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid lightgray;
+  }
+  .highlight-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid lightgray;
+    margin-bottom: 10px;
+
+    .highlight-item-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      margin-bottom: 20px;
+      .highlight-item-text-title-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: baseline;
+        width: 100%;
+
+        .highlight-item-text-title {
+          margin-left: 10px;
+          margin-right: 10px;
+          font-size: 20px;
+          font-weight: bold;
+          margin-bottom: 25px;
+        }
+
+        .highlight-item-text-url {
+          font-size: 12px;
+          width: 220px;
+          color: blue;
+          float: right;
+          text-decoration: underline;
+        }
+      }
+      .highlight-item-text-content {
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 15px;
+      }
+    }
+    .highlight-item-buttons {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      .highlight-item-button {
+        display: flex;
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 75px;
+        height: 30px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        border: none;
+        background-color: transparent;
+        text-decoration: none;
+        color: black;
+        font-size: 15px;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+          cursor: pointer;
+          background-color: lightgray;
+        }
+      }
+      .highlight-item-button-icon {
+        width: 20px;
+        height: 20px;
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+}

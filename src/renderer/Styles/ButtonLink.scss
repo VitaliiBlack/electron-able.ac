@@ -1,0 +1,29 @@
+.button-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background-color: transparent;
+  color: black;
+  margin-left: 5px;
+  margin-right: 5px;
+  min-width: 120px;
+  min-height: 30px;
+  -webkit-app-region: no-drag;
+  -webkit-user-select: none;
+  user-select: none;
+  .image {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+  }
+  p {
+    margin: 0;
+    padding: 0;
+  }
+}
+.button-link-selected {
+  color: darkblue;
+}
