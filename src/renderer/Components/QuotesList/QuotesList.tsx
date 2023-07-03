@@ -14,8 +14,8 @@ const QuotesList = observer((props: QuotesListProps) => {
     <div
       className="highlighted-list"
       style={{
-        height: quotes.length > 0 ? windowSize![1] - 170 : '',
-        width: isFullscreen ? windowSize![0] - 70 : '',
+        height: !isFullscreen ? windowSize![1] - 170 : windowSize![1] - 70,
+        width: isFullscreen ? windowSize![0] : '',
       }}
     >
       {quotes && quotes.length > 0 ? (
