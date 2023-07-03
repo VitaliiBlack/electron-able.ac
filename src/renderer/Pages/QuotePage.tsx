@@ -7,14 +7,10 @@ const QuotePage = observer(() => {
   const quote = QuotesStore.getQuote(id!);
   return (
     quote && (
-      <div
-        style={{
-          backgroundColor: 'white',
-        }}
-      >
-        <div>{quote?.text}</div>
-        <div>{quote?.link}</div>
-        <div>
+      <div className="quote-page">
+        <div className="quote-page-content">{quote?.text}</div>
+        <div className="quote-page-link">{quote?.link}</div>
+        <div className="quote-page-data">
           {new Date(quote?.createdAt).toLocaleDateString()} :{' '}
           {new Date(quote?.createdAt).toLocaleTimeString()}
         </div>
