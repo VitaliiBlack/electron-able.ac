@@ -116,17 +116,6 @@ const createWindow = async () => {
     mainWindow = null;
   });
 
-  mainWindow.on('resize', () => {
-    // if (view) {
-    //   view.setBounds({
-    //     x: coordinates!.xPosition,
-    //     y: coordinates!.yPosition,
-    //     width: coordinates!.widthPosition,
-    //     height: coordinates!.heightPosition,
-    //   });
-    // }
-  });
-
   const menuBuilder = new MenuBuilder(mainWindow);
   menuBuilder.buildMenu();
 
@@ -230,20 +219,6 @@ ipcMain.on('showNotification', (event, title, body) => {
   notification.show();
 });
 
-ipcMain.on('show-context-menu', (event) => {
-  const menu = Menu.buildFromTemplate([
-    {
-      label: 'Menu Item 1',
-      click: () => {
-        event.sender.send('context-menu-command', 'menu-item-1');
-      },
-    },
-    { type: 'separator' },
-    { label: 'Menu Item 2', type: 'checkbox', checked: true },
-  ]);
-  menu.popup({ window: BrowserWindow.fromWebContents(event.sender) ?? undefined });
-});
-
 /**
  * Add event listeners...
  */
@@ -258,21 +233,6 @@ app.on('window-all-closed', () => {
 });
 
 app.on('web-contents-created', (event, contents) => {
-  // contents.on('will-navigate', (e, navigationUrl) => {
-  //   const parsedUrl = new URL(navigationUrl);
-  //   if (parsedUrl.origin !== 'https://www.google.com') {
-  //     e.preventDefault();
-  //   }
-  // });
-
-  // // Listen for any new window events
-  // contents.on('will-navigate', (e, navigationUrl) => {
-  //   const parsedUrl = new URL(navigationUrl);
-  //   if (parsedUrl.origin !== 'https://www.google.com') {
-  //     e.preventDefault();
-  //   }
-  // });
-
   contents.on('context-menu', (e, params) => {
     let { x, y } = params;
     if (contents.getType() === 'browserView') {
@@ -291,6 +251,16 @@ app.on('web-contents-created', (event, contents) => {
       },
     ]).popup({ window: mainWindow!, x, y });
   });
+});
+
+app.setAboutPanelOptions({
+  applicationName: 'electron-able.ac ',
+  applicationVersion: '0.0.1',
+  version: '0.0.1',
+  credits: 'electron-able.ac',
+  authors: ['Vitalii Hrybinyk'],
+  website: 'https://github.com/VitaliiBlack/electron-able.ac',
+  iconPath: path.join(__dirname, '../../assets/icon.png'),
 });
 
 app

@@ -5,8 +5,7 @@
   "license": "MIT",
   "author": {
     "name": "test-task-able-ac",
-    "email": "gvitaha@gmail.com",
-    "url": "https://goodle.com"
+    "email": "gvitaha@gmail.com"
   },
   "main": "./dist/main/main.js",
   "scripts": {

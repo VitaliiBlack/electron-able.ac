@@ -3,7 +3,7 @@
   "homepage": "add github repo",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/electron-react-boilerplate/electron-react-boilerplate.git"
+    "url": "git+https://github.com/VitaliiBlack/electron-able.ac.git"
   },
   "license": "MIT",
   "author": {
@@ -164,8 +164,8 @@
     "webpack-obfuscator": "^3.5.1"
   },
   "build": {
-    "productName": "ElectronReact",
-    "appId": "org.erb.ElectronReact",
+    "productName": "Test App able.ac",
+    "appId": "org.erb.able.ac",
     "asar": true,
     "asarUnpack": "**\\*.{node,dll}",
     "files": [
@@ -228,9 +228,6 @@
       "owner": "test-task-able.ac",
       "repo": "test-task-able.ac"
     }
-  },
-  "collective": {
-    "url": "https://opencollective.com/electron-react-boilerplate-594"
   },
   "devEngines": {
     "node": ">=14.x",
