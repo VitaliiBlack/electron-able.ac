@@ -28,7 +28,6 @@ class QuotesStore {
   }
 
   public getQuote(id: string): Quote | undefined {
-    console.log(id);
     const returnValue = this.quotes.find((quote) => quote.id === id);
     return returnValue;
   }

@@ -10,7 +10,6 @@ const BrowserViewHighlight = observer(() => {
   const resize = useResize();
 
   useEffect(() => {
-    console.log('resize', resize);
     const elementCoordinates = document.getElementById('content-window')?.getBoundingClientRect();
     setWindowSize([window.innerWidth, window.innerHeight]);
     const coordinates = {

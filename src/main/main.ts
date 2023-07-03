@@ -193,7 +193,6 @@ ipcMain.on('minMaxWindow', () => {
 });
 
 ipcMain.on('close', () => {
-  console.log('close from main');
   if (mainWindow) {
     mainWindow?.close();
     mainWindow = null;
